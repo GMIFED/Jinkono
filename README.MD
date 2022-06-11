@@ -9,3 +9,7 @@ To simplify neural network arcitecture, I plan to develop a specialized I/O modu
 All modules are connected on the backplane via a PSIE connector.
 
 Development has just begun, so if you have comments and suggestions, please contact me.
+
+<p align="center">
+  <img src="Images/人工脳.png">  
+</p>
