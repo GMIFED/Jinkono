@@ -6,7 +6,7 @@ Conceptually, each FPGA module is an independent part of the computing system, h
 
 To simplify neural network arcitecture, I plan to develop a specialized I/O module with a fixed structure and set of functions. It is a bridge between the physical shell of the robotic system and the computing modules.
 
-All modules are connected on the backplane via a PSIE connector.
+All modules are connected on the backplane via a PSIe connector.
 
 Development has just begun, so if you have comments and suggestions, please contact me.
 

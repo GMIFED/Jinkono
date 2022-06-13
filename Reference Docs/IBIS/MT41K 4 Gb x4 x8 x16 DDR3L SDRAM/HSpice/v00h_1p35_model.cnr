@@ -1,0 +1,231 @@
+$ v00h_1p35_model.cnr
+
+***************************************************************
+.LIB DEVPAR
+.PROTECT
+**** CFat decoupling cap enable
+.PARAM rcap_vcc=0.01
+*.PARAM rcap_vcc=1e9
+
+.PARAM rcap_vccq=0.01
+*.PARAM rcap_vccq=1e9
+
+.PARAM rcap_vperi=0.01
+*.PARAM rcap_vperi=1e9
+
+**** Slew Drive Rate Trims
+.PARAM drv3=gnd drv2=gnd drv1=gnd drv0=gnd
+
+**** Delay Trims
+.PARAM dly4=0 dly3=0 dly2=vccr dly1=vccr dly0=vccr
+
+.UNPROTECT
+.ENDL DEVPAR
+
+
+***************************************************************
+
+.LIB FAST_1066
+.PROTECT
+
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' FF
+.PARAM MULTN=1 MULTP=1 CAP=1
+
+**** Drive Strength Trims:  PUP = 11100, PDN = 11110
+.PARAM PUPAdj4=vccq PUPAdj3=vccq PUPAdj2=vccq PUPAdj1=gnd  PUPAdj0=gnd
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=vccq PDNAdj1=vccq PDNAdj0=gnd
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL FAST_1066
+
+***************************************************************
+
+.LIB TYP_1066
+.PROTECT
+
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' TT
+.PARAM MULTN=0 MULTP=0 CAP=0
+
+**** Drive Strength Trims:  PUP = 11010, PDN = 11100
+.PARAM PUPAdj4=vccq PUPAdj3=vccq PUPAdj2=gnd  PUPAdj1=vccq PUPAdj0=gnd
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=vccq PDNAdj1=gnd  PDNAdj0=gnd
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL TYP_1066
+
+***************************************************************
+
+.LIB SLOW_1066
+.PROTECT
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' SS
+.PARAM MULTN=-1 MULTP=-1 CAP=-1
+
+**** Drive Strength Trims:  PUP = 10011, PDN = 10101
+.PARAM PUPAdj4=vccq PUPAdj3=gnd  PUPAdj2=gnd  PUPAdj1=vccq PUPAdj0=vccq
+.PARAM PDNAdj4=vccq PDNAdj3=gnd  PDNAdj2=vccq PDNAdj1=gnd  PDNAdj0=vccq
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL SLOW_1066
+
+***************************************************************
+
+.LIB FAST_1066_IT
+.PROTECT
+
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' FF
+.PARAM MULTN=1 MULTP=1 CAP=1
+
+**** Drive Strength Trims:  PUP = 11110, PDN = 11111
+.PARAM PUPAdj4=vccq PUPAdj3=vccq PUPAdj2=vccq PUPAdj1=vccq PUPAdj0=gnd
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=vccq PDNAdj1=vccq PDNAdj0=vccq
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL FAST_1066_IT
+
+***************************************************************
+
+.LIB SLOW_1066_AT
+.PROTECT
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' SS
+.PARAM MULTN=-1 MULTP=-1 CAP=-1
+
+**** Drive Strength Trims:  PUP = 10011, PDN = 10101
+.PARAM PUPAdj4=vccq PUPAdj3=gnd  PUPAdj2=gnd  PUPAdj1=vccq PUPAdj0=vccq
+.PARAM PDNAdj4=vccq PDNAdj3=gnd  PDNAdj2=vccq PDNAdj1=gnd  PDNAdj0=vccq
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL SLOW_1066_AT
+
+***************************************************************
+
+.LIB FAST_2133
+.PROTECT
+
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' FF
+.PARAM MULTN=1 MULTP=1 CAP=1
+
+**** Drive Strength Trims:  PUP = 11100, PDN = 11110
+.PARAM PUPAdj4=vccq PUPAdj3=vccq PUPAdj2=vccq PUPAdj1=gnd  PUPAdj0=gnd
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=vccq PDNAdj1=vccq PDNAdj0=gnd
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL FAST_2133
+
+***************************************************************
+
+.LIB TYP_2133
+.PROTECT
+
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' FF
+.PARAM SIGD2D=1.5
+.PARAM MULTN=0 MULTP=0 CAP=0
+
+**** Drive Strength Trims:  PUP = 11011, PDN = 11101
+.PARAM PUPAdj4=vccq PUPAdj3=vccq PUPAdj2=gnd  PUPAdj1=vccq PUPAdj0=vccq
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=vccq PDNAdj1=gnd  PDNAdj0=vccq
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL TYP_2133
+
+***************************************************************
+
+.LIB SLOW_2133
+.PROTECT
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' TT
+.PARAM MULTN=-1 MULTP=-1 CAP=-1
+
+**** Drive Strength Trims:  PUP = 10111, PDN = 11010
+.PARAM PUPAdj4=vccq PUPAdj3=gnd  PUPAdj2=vccq PUPAdj1=vccq PUPAdj0=vccq
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=gnd  PDNAdj1=vccq PDNAdj0=gnd
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL SLOW_2133
+
+***************************************************************
+
+.LIB FAST_2133_IT
+.PROTECT
+
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' FF
+.PARAM MULTN=1 MULTP=1 CAP=1
+
+**** Drive Strength Trims:  PUP = 11110, PDN = 11111
+.PARAM PUPAdj4=vccq PUPAdj3=vccq PUPAdj2=vccq PUPAdj1=vccq PUPAdj0=gnd
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=vccq PDNAdj1=vccq PDNAdj0=vccq
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL FAST_2133_IT
+
+***************************************************************
+
+.LIB SLOW_2133_AT
+.PROTECT
+.LIB 'v00h_1p35_model.cnr' DEVPAR
+.LIB 'v00h_1p35_model.cnr' TT
+.PARAM MULTN=-1 MULTP=-1 CAP=-1
+
+**** Drive Strength Trims:  PUP = 10111, PDN = 11010
+.PARAM PUPAdj4=vccq PUPAdj3=gnd  PUPAdj2=vccq PUPAdj1=vccq PUPAdj0=vccq
+.PARAM PDNAdj4=vccq PDNAdj3=vccq PDNAdj2=gnd  PDNAdj1=vccq PDNAdj0=gnd
+
+**** Delay Parameters
+.PARAM delay_dllckdi=275ps
+
+.UNPROTECT
+.ENDL SLOW_2133_AT
+
+***************************************************************
+
+
+
+
+.LIB FF
+.INC "v00h_fast.inc"
+.ENDL
+
+.LIB TT
+.INC "v00h_typ.inc"
+.ENDL
+
+.LIB SS
+.INC "v00h_slow.inc"
+.ENDL
+
+
+
